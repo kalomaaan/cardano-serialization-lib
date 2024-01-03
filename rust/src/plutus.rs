@@ -352,7 +352,7 @@ impl Costmdls {
         Languages(self.0.iter().map(|(k, _v)| k.clone()).collect::<Vec<_>>())
     }
 
-    pub(crate) fn language_views_encoding(&self) -> Vec<u8> {
+    pub fn language_views_encoding(&self) -> Vec<u8> {
         let mut serializer = Serializer::new_vec();
         fn key_len(l: &Language) -> usize {
             if l.kind() == LanguageKind::PlutusV1 {
