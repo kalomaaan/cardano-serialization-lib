@@ -1025,7 +1025,7 @@ impl RedeemerTag {
 #[derive(
     Clone, Debug, Eq, Ord, PartialEq, PartialOrd, serde::Serialize, serde::Deserialize, JsonSchema,
 )]
-pub struct Redeemers(pub(crate) Vec<Redeemer>);
+pub struct Redeemers(pub Vec<Redeemer>);
 
 impl_to_from!(Redeemers);
 
